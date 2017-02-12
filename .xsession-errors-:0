@@ -1,0 +1,111 @@
+gnome-session-is-accelerated: llvmpipe detected.
+gnome-keyring-daemon: insufficient process capabilities, unsecure memory might get used
+gnome-keyring-daemon: insufficient process capabilities, unsecure memory might get used
+gnome-keyring-daemon: insufficient process capabilities, unsecure memory might get used
+** Message: couldn't access control socket: /run/user/1000/keyring/control: No such file or directory
+** Message: couldn't access control socket: /run/user/1000/keyring/control: No such file or directory
+Gjs-Message: JS LOG: Failed to add search provider /usr/share/gnome-shell/search-providers/org.gnome.bijiben-search-provider.ini: TypeError: appInfo is null
+
+** (gnome-settings-daemon:2117): WARNING **: Schemas 'org.gnome.desktop.a11y' has not been setup
+
+(nautilus:2146): Gtk-WARNING **: Theme parsing error: <broken file>:1:0: Failed to import: The resource at '/org/gnome/libgd/tagged-entry/default.css' does not exist
+
+** (nautilus:2146): WARNING **: Can not calculate _NET_NUMBER_OF_DESKTOPS
+
+** (nautilus:2146): WARNING **: Can not calculate _NET_NUMBER_OF_DESKTOPS
+
+** (nautilus:2146): WARNING **: Can not get _NET_WORKAREA
+
+** (nautilus:2146): WARNING **: Can not determine workarea, guessing at layout
+
+** (nautilus:2146): WARNING **: Can not calculate _NET_NUMBER_OF_DESKTOPS
+
+** (nautilus:2146): WARNING **: Can not calculate _NET_NUMBER_OF_DESKTOPS
+
+** (nautilus:2146): WARNING **: Can not get _NET_WORKAREA
+
+** (nautilus:2146): WARNING **: Can not determine workarea, guessing at layout
+
+** (nautilus:2146): WARNING **: Can not calculate _NET_NUMBER_OF_DESKTOPS
+
+** (nautilus:2146): WARNING **: Can not calculate _NET_NUMBER_OF_DESKTOPS
+
+** (nautilus:2146): WARNING **: Can not get _NET_WORKAREA
+
+** (nautilus:2146): WARNING **: Can not determine workarea, guessing at layout
+
+** (nautilus:2146): WARNING **: Can not calculate _NET_NUMBER_OF_DESKTOPS
+
+** (nautilus:2146): WARNING **: Can not calculate _NET_NUMBER_OF_DESKTOPS
+
+** (nautilus:2146): WARNING **: Can not get _NET_WORKAREA
+
+** (nautilus:2146): WARNING **: Can not determine workarea, guessing at layout
+Window manager warning: WM_TRANSIENT_FOR window 0x2400009 for 0x2400009 (OpenSSH Au) would create loop.
+Window manager warning: WM_TRANSIENT_FOR window 0x2400009 for 0x2400009 (OpenSSH Au) would create loop.
+
+(gnome-shell:1998): mutter-WARNING **: STACK_OP_ADD: window 0x2400009 (OpenSSH Au) already in stack
+
+(gnome-shell:1998): mutter-WARNING **: STACK_OP_ADD: window 0x2400009 (OpenSSH Au) already in stack
+
+(gnome-shell:1998): mutter-WARNING **: STACK_OP_ADD: window 0x2400009 (OpenSSH Au) already in stack
+Window manager warning: WM_TRANSIENT_FOR window 0x2400009 for 0x2400009 (OpenSSH Au) would create loop.
+Window manager warning: WM_TRANSIENT_FOR window 0x2400009 for 0x2400009 (OpenSSH Au) would create loop.
+
+(gnome-shell:1998): mutter-WARNING **: STACK_OP_ADD: window 0x2400009 (OpenSSH Au) already in stack
+
+(gnome-shell:1998): mutter-WARNING **: STACK_OP_ADD: window 0x2400009 (OpenSSH Au) already in stack
+
+(gnome-shell:1998): mutter-WARNING **: STACK_OP_ADD: window 0x2400009 (OpenSSH Au) already in stack
+Gjs-Message: JS LOG: Invalid result meta returned from search provider seahorse.desktop
+Gjs-Message: JS LOG: Invalid result meta returned from search provider seahorse.desktop
+Gjs-Message: JS LOG: Invalid result meta returned from search provider seahorse.desktop
+Gjs-Message: JS LOG: Invalid result meta returned from search provider seahorse.desktop
+Gjs-Message: JS LOG: Invalid result meta returned from search provider seahorse.desktop
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 345 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 3830 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 3916 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 3992 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4068 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4144 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4220 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4296 was not found when attempting to remove it
+
+(evolution-alarm-notify:2185): evolution-alarm-notify-WARNING **: alarm.c:253: Requested removal of nonexistent alarm!
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4372 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4448 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4524 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4600 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4676 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4752 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4828 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4904 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 4980 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 5056 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 5132 was not found when attempting to remove it
+
+(gnome-settings-daemon:2117): GLib-CRITICAL **: Source ID 5217 was not found when attempting to remove it
+Window manager warning: Invalid WM_TRANSIENT_FOR window 0x2200007 specified for 0x2200016 (Tilda 0 Co).
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x2200016 (Tilda 0 Co)
+Window manager warning: Invalid WM_TRANSIENT_FOR window 0x2e00007 specified for 0x2e00016 (Tilda 0 Co).
+Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x2e00016 (Tilda 0 Co)
+Gjs-Message: JS LOG: Invalid result meta returned from search provider seahorse.desktop
