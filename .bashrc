@@ -1,20 +1,22 @@
+export EMAIL="acarta.math@gmail.com"
+export NAME="Aaron D. Carta"
+
 # some programs want EDITOR for default editor 
+export EMACSCLIENT=/usr/local/bin/emacsclient
+alias emacsclient=$EMACSCLIENT
+export EMACSCLIENT=emacsclient
+alias ec="$EMACSCLIENT -c -n"
+export EDITOR="$EMACSCLIENT -c"
+export ALTERNATE_EDITOR=""
+export VISUAL=$EDITOR
+export GIT_EDITOR=$EDITOR
 
-export EDITOR=/usr/bin/emacs
-
-test -s ~/.alias && . ~/.alias || true
-
-alias julia="julia -p4 -q ---optimize -history-file={yes} --startup-file={yes} --history-file={yes} --check-bounds={yes}"
-
-# If not running interactively, don't do anything
-
+# If not running interactively, don't do anything 
 [ -z "$PS1" ] && return
-
 
 #-------------------------------------------------------------
 # Source global definitions (if any)
-#-------------------------------------------------------------
-
+#------------------------------------------------------------- 
 
 if [ -f /etc/bashrc ]; then
       . /etc/bashrc   # --> Read /etc/bashrc, if present.
@@ -298,30 +300,35 @@ export HISTTIMEFORMAT="$(echo -e ${BCyan})[%d/%m %H:%M:%S]$(echo -e ${NC}) "
 export HISTCONTROL=ignoredups
 export HOSTFILE=$HOME/.hosts    # Put a list of remote hosts in ~/.hosts
 
-
-#============================================================
-#
-#  ALIASES AND FUNCTIONS
-#
-#  Arguably, some functions defined here are quite big.
-#  If you want to make this file smaller, these functions can
-#+ be converted into scripts and removed from here.
-#
-#============================================================
-
 #-------------------
-# Personnal Aliases
+# Personal Aliases
 #-------------------
 
 
 test -s ~/.alias && . ~/.alias || true
 
-alias julia="julia -p4 -q ---optimize -history-file={yes} --startup-file={yes} --history-file={yes} --check-bounds={yes}"
+# always start julia with:
+# 	* no splash screen
+# 	* 4 parallel processes (# of cores on sisko)
+# 	* init file (if it exists)
+#
+# further, julia will always save:
+# 	* all REPL commands 
+# 	* memory allocations of functions (line-by-line)
+
+alias julia='julia -q -p4 --optimize --startup-file=yes --history-file=yes --track-allocation'
+
+# start some programs fullscreen
+
+alias terminator='terminator -f'
+alias emacs='emacs --fullscreen'
+
+
+# -> Prevents accidentally clobbering files.
 
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-# -> Prevents accidentally clobbering files.
 alias mkdir='mkdir -p'
 
 alias h='history'
@@ -337,8 +344,9 @@ alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
 
-#-------------------------------------------------------------
-# The 'ls' family (this assumes you use a recent GNU ls).
+# Convenience functions
+
+
 #-------------------------------------------------------------
 # Add colors for filetype and  human-readable sizes by default on 'ls':
 alias ls='ls -h --color'
@@ -361,12 +369,12 @@ alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 #-------------------------------------------------------------
 
 alias more='less'
-#export PAGER=less
-#export LESSCHARSET='latin1'
-#export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
+export PAGER=less
+export LESSCHARSET='latin1'
+export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
                 # Use this if lesspipe.sh exists.
-#export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
-#:stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
+export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
+:stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
 
 # LESS man page colors (makes Man pages more readable).
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -376,17 +384,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-
-
-#-------------------------------------------------------------
-# Spelling typos - highly personnal and keyboard-dependent :-)
-#-------------------------------------------------------------
-
-alias xs='cd'
-alias vf='cd'
-alias moer='more'
-alias moew='more'
-alias kk='ll'
 
 
 #-------------------------------------------------------------
@@ -894,7 +891,6 @@ _killall()
 }
 
 complete -F _killall killall killps
-
 
 
 
