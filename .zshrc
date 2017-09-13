@@ -105,108 +105,108 @@ export ALTERNATE_EDITOR=""
 export VISUAL=$EDITOR
 export GIT_EDITOR=$EDITOR
 
-# Test connection type:
-if [ -n "${SSH_CONNECTION}" ]; then
-    CNX=${Green}        # Connected on remote machine, via ssh (good).
-elif [[ "${DISPLAY%%:0*}" != "" ]]; then
-    CNX=${ALERT}        # Connected on remote machine, not via ssh (bad).
-else
-    CNX=${BCyan}        # Connected on local machine.
-fi
+# # Test connection type:
+# if [ -n "${SSH_CONNECTION}" ]; then
+#     CNX=${Green}        # Connected on remote machine, via ssh (good).
+# elif [[ "${DISPLAY%%:0*}" != "" ]]; then
+#     CNX=${ALERT}        # Connected on remote machine, not via ssh (bad).
+# else
+#     CNX=${BCyan}        # Connected on local machine.
+# fi
 
-# Test user type:
-if [[ ${USER} == "root" ]]; then
-    SU=${Red}           # User is root.
-elif [[ ${USER} != $(logname) ]]; then
-    SU=${BRed}          # User is not login user.
-else
-    SU=${BCyan}         # User is normal (well ... most of us are).
-fi
+# # Test user type:
+# if [[ ${USER} == "root" ]]; then
+#     SU=${Red}           # User is root.
+# elif [[ ${USER} != $(logname) ]]; then
+#     SU=${BRed}          # User is not login user.
+# else
+#     SU=${BCyan}         # User is normal (well ... most of us are).
+# fi
 
-NCPU=$(grep -c 'processor' /proc/cpuinfo)    # Number of CPUs
-SLOAD=$(( 100*${NCPU} ))        # Small load
-MLOAD=$(( 200*${NCPU} ))        # Medium load
-XLOAD=$(( 400*${NCPU} ))        # Xlarge load
+# NCPU=$(grep -c 'processor' /proc/cpuinfo)    # Number of CPUs
+# SLOAD=$(( 100*${NCPU} ))        # Small load
+# MLOAD=$(( 200*${NCPU} ))        # Medium load
+# XLOAD=$(( 400*${NCPU} ))        # Xlarge load
 
-# Returns system load as percentage, i.e., '40' rather than '0.40)'.
-function load()
-{
-    local SYSLOAD=$(cut -d " " -f1 /proc/loadavg | tr -d '.')
-    # System load of the current host.
-    echo $((10#$SYSLOAD))       # Convert to decimal.
-}
+# # Returns system load as percentage, i.e., '40' rather than '0.40)'.
+# function load()
+# {
+#     local SYSLOAD=$(cut -d " " -f1 /proc/loadavg | tr -d '.')
+#     # System load of the current host.
+#     echo $((10#$SYSLOAD))       # Convert to decimal.
+# }
 
-# Returns a color indicating system load.
-function load_color()
-{
-    local SYSLOAD=$(load)
-    if [ ${SYSLOAD} -gt ${XLOAD} ]; then
-        echo -en ${ALERT}
-    elif [ ${SYSLOAD} -gt ${MLOAD} ]; then
-        echo -en ${Red}
-    elif [ ${SYSLOAD} -gt ${SLOAD} ]; then
-        echo -en ${BRed}
-    else
-        echo -en ${Green}
-    fi
-}
+# # Returns a color indicating system load.
+# function load_color()
+# {
+#     local SYSLOAD=$(load)
+#     if [ ${SYSLOAD} -gt ${XLOAD} ]; then
+#         echo -en ${ALERT}
+#     elif [ ${SYSLOAD} -gt ${MLOAD} ]; then
+#         echo -en ${Red}
+#     elif [ ${SYSLOAD} -gt ${SLOAD} ]; then
+#         echo -en ${BRed}
+#     else
+#         echo -en ${Green}
+#     fi
+# }
 
-# Returns a color according to free disk space in $PWD.
-function disk_color()
-{
-    if [ ! -w "${PWD}" ] ; then
-        echo -en ${Red}
-        # No 'write' privilege in the current directory.
-    elif [ -s "${PWD}" ] ; then
-        local used=$(command df -P "$PWD" |
-                   awk 'END {print $5} {sub(/%/,"")}')
-        if [ ${used} -gt 95 ]; then
-            echo -en ${ALERT}           # Disk almost full (>95%).
-        elif [ ${used} -gt 90 ]; then
-            echo -en ${BRed}            # Free disk space almost gone.
-        else
-            echo -en ${Green}           # Free disk space is ok.
-        fi
-    else
-        echo -en ${Cyan}
-        # Current directory is size '0' (like /proc, /sys etc).
-    fi
-}
+# # Returns a color according to free disk space in $PWD.
+# function disk_color()
+# {
+#     if [ ! -w "${PWD}" ] ; then
+#         echo -en ${Red}
+#         # No 'write' privilege in the current directory.
+#     elif [ -s "${PWD}" ] ; then
+#         local used=$(command df -P "$PWD" |
+#                    awk 'END {print $5} {sub(/%/,"")}')
+#         if [ ${used} -gt 95 ]; then
+#             echo -en ${ALERT}           # Disk almost full (>95%).
+#         elif [ ${used} -gt 90 ]; then
+#             echo -en ${BRed}            # Free disk space almost gone.
+#         else
+#             echo -en ${Green}           # Free disk space is ok.
+#         fi
+#     else
+#         echo -en ${Cyan}
+#         # Current directory is size '0' (like /proc, /sys etc).
+#     fi
+# }
 
-# Returns a color according to running/suspended jobs.
-function job_color()
-{
-    if [ $(jobs -s | wc -l) -gt "0" ]; then
-        echo -en ${BRed}
-    elif [ $(jobs -r | wc -l) -gt "0" ] ; then
-        echo -en ${BCyan}
-    fi
-}
+# # Returns a color according to running/suspended jobs.
+# function job_color()
+# {
+#     if [ $(jobs -s | wc -l) -gt "0" ]; then
+#         echo -en ${BRed}
+#     elif [ $(jobs -r | wc -l) -gt "0" ] ; then
+#         echo -en ${BCyan}
+#     fi
+# }
 
-# Adds some text in the terminal frame (if applicable).
+# # Adds some text in the terminal frame (if applicable).
 
 
-# Now we construct the prompt.
-PROMPT_COMMAND="history -a"
-case ${TERM} in
-  *term | rxvt | linux)
-        PS1="\[\$(load_color)\][\A\[${NC}\] "
-        # Time of day (with load info):
-        PS1="\[\$(load_color)\][\A\[${NC}\] "
-        # User@Host (with connection type info):
-        PS1=${PS1}"\[${SU}\]\u\[${NC}\]@\[${CNX}\]\h\[${NC}\] "
-        # PWD (with 'disk space' info):
-        PS1=${PS1}"\[\$(disk_color)\]\W]\[${NC}\] "
-        # Prompt (with 'job' info):
-        PS1=${PS1}"\[\$(job_color)\]>\[${NC}\] "
-        # Set title of current xterm:
-        PS1=${PS1}"\[\e]0;[\u@\h] \w\a\]"
-        ;;
-    *)
-        PS1="(\A \u@\h \W) > " # --> PS1="(\A \u@\h \w) > "
-                               # --> Shows full pathname of current dir.
-        ;;
-esac
+# # Now we construct the prompt.
+# PROMPT_COMMAND="history -a"
+# case ${TERM} in
+#   *term | rxvt | linux)
+#         PS1="\[\$(load_color)\][\A\[${NC}\] "
+#         # Time of day (with load info):
+#         PS1="\[\$(load_color)\][\A\[${NC}\] "
+#         # User@Host (with connection type info):
+#         PS1=${PS1}"\[${SU}\]\u\[${NC}\]@\[${CNX}\]\h\[${NC}\] "
+#         # PWD (with 'disk space' info):
+#         PS1=${PS1}"\[\$(disk_color)\]\W]\[${NC}\] "
+#         # Prompt (with 'job' info):
+#         PS1=${PS1}"\[\$(job_color)\]>\[${NC}\] "
+#         # Set title of current xterm:
+#         PS1=${PS1}"\[\e]0;[\u@\h] \w\a\]"
+#         ;;
+#     *)
+#         PS1="(\A \u@\h \W) > " # --> PS1="(\A \u@\h \w) > "
+#                                # --> Shows full pathname of current dir.
+#         ;;
+# esac
 
 
 
