@@ -8,7 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-<<<<<<< HEAD
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -81,39 +80,3 @@ alias ipython="ipython --autoindent --pylab=qt4 --classic --color-info --no-bann
 alias ipython3="ipython --autoindent --pylab=qt4 --classic --color-info --no-banner"
 
 export OMP_NUM_THREADS="$(nproc)"
-
-=======
-# vi bindings in shell
-set -o vi
-
-# use clang for c/c++ compiler
-export CC=clang
-export CXX=clang++
-export OMPI_MPICC=clang
-export OMPI_MPICXX=clang++
-
-# if running bash
-# if [ -n "$BASH_VERSION" ]; then
-#     # include .bashrc if it exists
-#     if [ -f "$HOME/.bashrc" ]; then
-# 	. "$HOME/.bashrc"
-#     fi
-# fi
-
-# # set PATH so it includes user's private bin if it exists
-# if [ -d "$HOME/bin" ] ; then
-#     PATH="$HOME/bin:$PATH"
-# fi
-
-# # include user's private .local if it exists
-# if [ -d "$HOME/.local/bin"] ; then
-#     PATH="HOME/.local/bin:$PATH"
-# fi
-
-export PATH="$HOME/channelflow/bin:$PATH"
-
-alias firefox="/opt/mozilla/firefox/firefox"
-
-alias ipython="ipython --autoindent --pylab=gtk --classic --color-info --gui=gtk --no-banner"
-alias ipython3="ipython --autoindent --pylab=gtk --classic --color-info --gui=gtk --no-banner"
->>>>>>> 975da236dc2de78218feb22fac15ace96ca1d192
