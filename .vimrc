@@ -48,3 +48,6 @@ nnoremap ; :
 set relativenumber
 
 set paste
+
+set expandtab
+set tabstop=4
