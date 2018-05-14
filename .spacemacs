@@ -58,7 +58,6 @@ values."
      markdown
      octave
      org
-     pandoc
      pdf-tools
      python
      semantic
@@ -67,7 +66,6 @@ values."
             shell-default-position 'bottom)
      )
      shell-scripts
-     slack
      spell-checking
      spotify
      syntax-checking
