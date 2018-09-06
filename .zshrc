@@ -108,3 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+<<<<<<< HEAD
+=======
+source /home/acarta/.oh-my-git/prompt.sh
+>>>>>>> bfdd8e1bb278e0c14ad9a2f3ce5876a7a2618980
