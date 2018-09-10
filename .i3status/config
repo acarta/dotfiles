@@ -9,6 +9,7 @@ order += "ethernet enp0s31f6"
 order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "load"
+order += "volume master"
 order += "tztime local"
 
 ethernet enp0s31f6 {
@@ -46,3 +47,10 @@ disk "/home" {
         format = "/home: %free"
 }
 
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
