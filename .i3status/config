@@ -6,15 +6,22 @@ general {
 order += "disk /"
 order += "disk /home"
 order += "ethernet enp0s31f6"
+order += "wireless wlp4s0"
 order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "load"
 order += "volume master"
 order += "tztime local"
 
+wireless wlp4s0 {
+        # if you use %speed, i3status requires the cap_net_admin capability
+        format_up = "W: %ip (%bitrate)"
+        format_down = "W: down"
+}
+
 ethernet enp0s31f6 {
         # if you use %speed, i3status requires the cap_net_admin capability
-        format_up = "E: %ip (%speed)"
+        format_up = "E: %ip (%bitrate)"
         format_down = "E: down"
 }
 
