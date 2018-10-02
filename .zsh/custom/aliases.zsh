@@ -14,16 +14,18 @@ function _set_pkg_aliases()
 {
 	  if [ -x $(which apt) ]; then
 		    alias pkgsearch='aptitude search'
-		    alias pkgshow='aptitude show'
-		    alias pkginst='sudo aptitude install -V'
-		    alias pkgupd='sudo aptitude update'
-		    alias pkgupg='sudo aptitude dist-upgrade -V && sudo aptitude autoremove'
-		    alias pkgupgd='sudo aptitude update && sudo aptitude dist-upgrade -V && sudo aptitude autoremove'
-		    alias pkgrm='sudo aptitude remove'
-		    alias pkgpurge='sudo aptitude remove --purge'
+		    alias pkgshow='apt show'
+		    alias pkginst='sudo apt install -V'
+		    alias pkgupd='sudo apt update'
+		    alias pkgupg='sudo apt dist-upgrade -V && sudo apt autoremove'
+		    alias pkgupgd='sudo apt update && sudo apt dist-upgrade -V && sudo apt autoremove'
+		    alias pkgrm='sudo apt remove'
+		    alias pkgpurge='sudo apt remove --purge'
 		    alias pkgfiles='dpkg --listfiles'
 	  fi
 }
 
 _set_emacs_aliases
 _set_pkg_aliases
+
+alias firefox="/opt/firefox/firefox"
