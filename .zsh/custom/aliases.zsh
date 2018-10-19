@@ -29,3 +29,5 @@ _set_emacs_aliases
 _set_pkg_aliases
 
 alias firefox="/opt/firefox/firefox"
+alias ipythonqt="ipython --pylab=qt"
+alias tailnf="tail -n20 -f"
