@@ -11,6 +11,7 @@ order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "load"
 order += "volume master"
+order += "battery all"
 order += "tztime local"
 
 wireless wlp4s0 {
@@ -38,7 +39,7 @@ load {
 }
 
 cpu_temperature 0 {
-        format = "T: %degrees °C"
+        format = "T: %degrees°C"
         path = "/sys/class/thermal/thermal_zone0/temp"
 }
 
@@ -60,4 +61,8 @@ volume master {
         device = "default"
         mixer = "Master"
         mixer_idx = 0
+}
+
+battery all {
+    format = "%status %percentage (%remaining %consumption)"
 }
