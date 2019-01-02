@@ -177,6 +177,7 @@ bar {
         status_command i3status
         position top
         font pango:monospace 7
+
         colors {
         background $bg-color
         separator #757575
@@ -187,7 +188,6 @@ bar {
         }
 }
 
-# Multimedia keys
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +2
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -2
