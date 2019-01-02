@@ -16,8 +16,18 @@ order += "tztime local"
 
 ethernet eno1 {
         # if you use %speed, i3status requires the cap_net_admin capability
+<<<<<<< HEAD
         # format_up = "E: (%quality at %essid, %bitrate / %frequency) %ip"
         format_up = "E: %speed"
+=======
+        format_up = "W: (%quality at %essid, %bitrate / %frequency) %ip"
+        format_down = "W: down"
+}
+
+ethernet enp0s31f6 {
+        # if you use %speed, i3status requires the cap_net_admin capability
+        format_up = "W: (%quality at %essid, %bitrate / %frequency) %ip"
+>>>>>>> 1870be40770cfc492bc8722b4b083f8c6096fe47
         format_down = "E: down"
 }
 
@@ -64,4 +74,5 @@ volume master {
 
 battery all {
     format = "%status %percentage (%remaining %consumption)"
+    last_full_capacity=true
 }
