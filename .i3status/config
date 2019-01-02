@@ -4,25 +4,20 @@ general {
 }
 
 order += "disk /"
-order += "disk /home"
-order += "ethernet enp0s31f6"
-order += "wireless wlp4s0"
+order += "disk /mnt/alpha"
+# order += "run_watch DHCP"
+order += "ethernet eno1"
 order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "load"
 order += "volume master"
-order += "battery all"
+#order += "battery all"
 order += "tztime local"
 
-wireless wlp4s0 {
+ethernet eno1 {
         # if you use %speed, i3status requires the cap_net_admin capability
-        format_up = "W: %ip (%bitrate)"
-        format_down = "W: down"
-}
-
-ethernet enp0s31f6 {
-        # if you use %speed, i3status requires the cap_net_admin capability
-        format_up = "E: %ip (%bitrate)"
+        # format_up = "E: (%quality at %essid, %bitrate / %frequency) %ip"
+        format_up = "E: %speed"
         format_down = "E: down"
 }
 
@@ -51,8 +46,12 @@ disk "/" {
         format = "/: %free"
 }
 
-disk "/home" {
-        format = "/home: %free"
+disk "~" {
+        format = "~: %free"
+}
+
+disk "/mnt/alpha" {
+        format = "alpha: %free"
 }
 
 volume master {
