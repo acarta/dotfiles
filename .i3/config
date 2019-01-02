@@ -196,9 +196,9 @@ bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id xcape -e "Control_L=Escape"
+exec --no-startup-id "setxkbmap -option ctrl:nocaps"
+exec --no-startup-id "xcape -e Control_L=Escape"
 
-exec --no-startup-id nm-applet
+exec --no-startup-id "nm-applet"
 exec --no-startup-id nitrogen --restore 
-exec --no-startup-id compton -cC
+exec --no-startup-id "compton -c -C -f"
