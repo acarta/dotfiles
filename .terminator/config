@@ -5,7 +5,7 @@
 [layouts]
   [[default]]
     [[[child1]]]
-      command = tmux attach -t base || tmux new -s base
+      command = ""
       parent = window0
       profile = default
       type = Terminal
