@@ -31,3 +31,4 @@ _set_emacs_aliases
 alias firefox="/opt/firefox/firefox"
 alias ipythonqt="ipython --pylab=qt"
 alias tailnf="tail -n20 -f"
+alias julia="${HOME}/julia/bin/julia"
