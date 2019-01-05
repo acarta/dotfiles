@@ -6,7 +6,6 @@ general {
     color_bad = '#e89393'
 }
 
-order += "volume master"
 order += "disk /"
 order += "disk /mnt/alpha"
 #order += "disk /data"
@@ -15,23 +14,24 @@ order += "disk /mnt/alpha"
 #order += "ipv6"
 #order += "run_watch VPN"
 #order += "wireless wlp4s0"
-#order += "ethernet enp5s0"
+order += "ethernet eno1"
 #order += "battery all"
 order += "cpu_temperature 0"
 order += "cpu_usage 0"
 order += "load"
+order += "volume master"
 order += "tztime local"
 
 #wireless wlp4s0 {
-#    format_up = "%quality  %essid %ip"
+#    format_up = " %quality %essid %ip"
 #    format_down = ""
 #}
 
-#ethernet eno1 {
-#    # if you use %speed, i3status requires root privileges
-#    format_up = "%ip (%speed)"
-#    format_down = ""
-#}
+ethernet eno1 {
+   # if you use %speed, i3status requires root privileges
+   format_up = "%ip (%speed)"
+   format_down = ""
+}
 
 run_watch DHCP {
         pidfile = "/var/run/dhclient*.pid"
