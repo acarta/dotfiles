@@ -1,67 +1,90 @@
 general {
-        colors = true
-        interval = 5
+    interval = 1
+    colors = true
+    color_good = '#88b090'
+    color_degraded = '#ccdc90'
+    color_bad = '#e89393'
 }
 
+order += "volume master"
 order += "disk /"
 order += "disk /mnt/alpha"
-# order += "run_watch DHCP"
-order += "ethernet eno1"
-order += "cpu_temperature 0"
-order += "cpu_usage"
-order += "load"
-order += "volume master"
+#order += "disk /data"
+# order += "disk /home"
+#order += "run_watch DHCP"
+#order += "ipv6"
+#order += "run_watch VPN"
+#order += "wireless wlp4s0"
+#order += "ethernet enp5s0"
 #order += "battery all"
+order += "cpu_temperature 0"
+order += "cpu_usage 0"
+order += "load"
 order += "tztime local"
 
-ethernet eno1 {
-        # if you use %speed, i3status requires the cap_net_admin capability
-        format_up = "E: %speed"
-        format_down = "E: down"
-}
+#wireless wlp4s0 {
+#    format_up = "%quality  %essid %ip"
+#    format_down = ""
+#}
+
+#ethernet eno1 {
+#    # if you use %speed, i3status requires root privileges
+#    format_up = "%ip (%speed)"
+#    format_down = ""
+#}
 
 run_watch DHCP {
         pidfile = "/var/run/dhclient*.pid"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+    format = " %H:%M  %Y-%m-%d"
 }
 
 load {
-        format = "Load: %1min"
+    format = " %1min"
 }
 
 cpu_temperature 0 {
-        format = "T: %degrees°C"
-        path = "/sys/class/thermal/thermal_zone0/temp"
+    format = " %degrees°C"
 }
 
 cpu_usage {
-        format = "CPU: %usage"
+    format = " %usage"
 }
 
 disk "/" {
-        format = "/: %free"
-}
-
-disk "~" {
-        format = "~: %free"
+    format = " /: %avail"
+    prefix_type	= custom
+    low_threshold = 20
+    threshold_type = percentage_avail
 }
 
 disk "/mnt/alpha" {
-        format = "alpha: %free"
+    format = " alpha: %avail"
+    prefix_type	= custom
+    low_threshold = 20
+    threshold_type = percentage_avail
 }
 
 volume master {
-        format = "♪: %volume"
-        format_muted = "♪: muted (%volume)"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
+    format = "%volume  "
+    format_muted = " "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
 
 battery all {
-    format = "%status %percentage (%remaining %consumption)"
-    last_full_capacity=true
+    format = "%status %percentage %remaining"
+    format_down = ""
+    last_full_capacity = true
+    integer_battery_capacity = true
+    low_threshold = 11
+    threshold_type = percentage
+    hide_seconds = true
+    status_chr = " "
+    status_bat = " "
+    status_unk = " "
+    status_full = " "
 }
