@@ -176,7 +176,7 @@ bindsym $mod+Shift+x exec i3lock --color $bg-color
 bar {
         status_command i3status
         position top
-        font pango:monospace 7
+        font pango:inconsolata medium 9
 
         colors {
         background $bg-color
