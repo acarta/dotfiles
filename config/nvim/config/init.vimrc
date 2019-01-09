@@ -21,6 +21,8 @@ Plug 'morhetz/gruvbox'
 " Base16 colors
 Plug 'chriskempson/base16-vim'
 
+"Plug 'powerline/powerline'
+
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
