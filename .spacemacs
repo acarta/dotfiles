@@ -56,7 +56,7 @@ values."
      octave
      org
      pandoc
-     pdf-tools
+     ;; pdf-tools
      python
      semantic
      (shell :variables
@@ -322,6 +322,7 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
+   enable-transparency
    ))
 
 (defun my-setup-indent (n)
@@ -337,6 +338,7 @@ values."
 ;; before packages are loaded. If you are unsure, you should try in setting them in
 ;; `dotspacemacs/user-config' first."
   (my-setup-indent 4)
+  ;; (enable-transparency)
   )
 
 (defun dotspacemacs/user-config ()

@@ -1,8 +1,3 @@
-syntax on
-syntax enable
-set background=dark
-colorscheme gruvbox
-
 set hlsearch
 
 set relativenumber
