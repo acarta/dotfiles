@@ -22,3 +22,12 @@ set smarttab
 set shiftwidth=4
 set autoindent
 set smartindent
+
+syntax on
+syntax enable
+
+set background=dark
+colorscheme gruvbox
+hi! Normal ctermbg=NONE guibg=NONE
+hi! Normal ctermbg=NONE guibg=NONE
+
