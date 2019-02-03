@@ -76,6 +76,8 @@ interval=5
 label=
 interval=5
 separator=true
+min_width= 100.00%
+interval=5
 
 [load_average]
 label=
