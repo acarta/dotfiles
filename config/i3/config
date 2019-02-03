@@ -188,12 +188,12 @@ bar {
         }
 }
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
-bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +2
+bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -2
 bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 exec_always "setxkbmap -option ctrl:nocaps"
 exec_always "xcape -e Control_L=Escape"
