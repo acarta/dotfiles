@@ -163,11 +163,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Deja Vu Sans Mono"
-                               :size 10
+   dotspacemacs-default-font '("Inconsolata "
+                               :size 12
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -331,23 +331,24 @@ values."
   )
 
 (defun dotspacemacs/user-init ()
-;; initialization function for user code.
-;; it is called immediately after `dotspacemacs/init', before layer configuration
-;; executes.
-;;  This function is mostly useful for variables that need to be set
-;; before packages are loaded. If you are unsure, you should try in setting them in
-;; `dotspacemacs/user-config' first."
+  ;; initialization function for user code.
+  ;; it is called immediately after `dotspacemacs/init', before layer configuration
+  ;; executes.
+  ;;  This function is mostly useful for variables that need to be set
+  ;; before packages are loaded. If you are unsure, you should try in setting them in
+  ;; `dotspacemacs/user-config' first."
   (my-setup-indent 4)
   ;; (enable-transparency)
   )
 
 (defun dotspacemacs/user-config ()
-;;   "Configuration function for user code.
-;; This function is called at the very end of Spacemacs initialization after
-;; layers configuration.
-;; This is the place where most of your configurations should be done. Unless it is
-;; explicitly specified that a variable should be set before a package is loaded,
-;; you should place your code here."
+  ;;   "Configuration function for user code.
+  ;; This function is called at the very end of Spacemacs initialization after
+  ;; layers configuration.
+  ;; This is the place where most of your configurations should be done. Unless it is
+  ;; explicitly specified that a variable should be set before a package is loaded,
+  ;; you should place your code here."
+  (menu-bar-mode 1)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
