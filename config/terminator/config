@@ -1,6 +1,7 @@
 [global_config]
   borderless = True
   tab_position = bottom
+  scrollbar_position = disabled
 [keybindings]
 [layouts]
   [[default]]
@@ -16,7 +17,7 @@
 [profiles]
   [[default]]
     background_color = "#282828"
-    background_darkness = 0.86
+    background_darkness = 0.8
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = Inconsolata Medium 9
