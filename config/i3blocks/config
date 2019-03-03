@@ -26,7 +26,7 @@
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
 command=$SCRIPT_DIR/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=10
 markup=none
 
 # Generic media player support
@@ -74,14 +74,23 @@ interval=5
 # see the script for details.
 [cpu_usage]
 label=
-interval=5
-separator=true
+interval=1
+separator=false
 min_width= 100.00%
 interval=5
 
 [load_average]
 label=
-interval=10
+interval=1
+separator=false
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[temperature]
+interval=1
+separator=false
 
 # Memory usage
 #
@@ -91,22 +100,26 @@ label=MEM
 separator=true
 interval=5
 
-# Temperature
-#
-# Support multiple chips, though lm-sensors.
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-[temperature]
-label=T
-interval=10
+# Nvidia Usage
+[nvidia use]
+label=GPU:
+command=~/github/dotfiles/config/i3blocks/nvidia-use.sh
+interval=1
+separator=false
+
+#Nvidia Temperature
+[nvidia]
+#label=
+command=~/github/dotfiles/config/i3blocks/nvidia.sh
+interval=1
 
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
-label=BAT
-label=⚡
-interval=5
+#[battery]
+#label=BAT
+#label=⚡
+#interval=5
 
 # Volume indicator
 #
