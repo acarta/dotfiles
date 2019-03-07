@@ -90,7 +90,7 @@ separator=false
 # see the script for details.
 [temperature]
 interval=1
-separator=false
+separator=true
 
 # Memory usage
 #
