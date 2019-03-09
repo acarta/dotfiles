@@ -147,7 +147,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-focus_follows_mouse yes
+focus_follows_mouse no
 
 bindsym $mod+r mode "resize"
 

@@ -67,6 +67,7 @@ separator=false
 [bandwidth]
 #INTERFACE=eth0
 interval=5
+min_width="IN 500K OUT 500K"
 
 # CPU usage
 #
@@ -102,7 +103,7 @@ interval=5
 
 # Nvidia Usage
 [nvidia use]
-label=GPU:
+label=GPU
 command=~/github/dotfiles/config/i3blocks/nvidia-use.sh
 interval=1
 separator=false
