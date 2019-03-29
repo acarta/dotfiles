@@ -202,5 +202,6 @@ exec_always "setxkbmap -option ctrl:nocaps"
 exec_always "xcape -e Control_L=Escape"
 
 exec --no-startup-id "nm-applet"
+exec --no-startup-id "xset -dpms"
 exec --no-startup-id nitrogen --restore 
 exec_always "compton -c -C -f "
