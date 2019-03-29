@@ -181,6 +181,11 @@ bar {
         position top
         font pango:inconsolata medium 9
 
+        # make bar auto-hidden by default
+        mode hide
+        hidden_state hide
+        modifier $mod
+
         colors {
         background $bg-color
         separator #757575
@@ -190,6 +195,9 @@ bar {
         urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
         }
 }
+# toggle between hide/show bar
+bindsym $mod+b bar hidden_state toggle
+
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +2
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -2
@@ -200,7 +208,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 exec_always "setxkbmap -option ctrl:nocaps"
 exec_always "xcape -e Control_L=Escape"
+exec_always "compton -c -C -f "
 
 exec --no-startup-id "nm-applet"
+exec --no-startup-id "xset -dpms"
 exec --no-startup-id nitrogen --restore 
-exec_always "compton -c -C -f "
