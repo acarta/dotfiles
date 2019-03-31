@@ -60,7 +60,7 @@ separator=false
 
 [wifi]
 #INTERFACE=wlp3s0
-label=
+#label=
 interval=10
 separator=false
 
@@ -73,14 +73,14 @@ interval=5
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=
+#label=
 interval=5
 separator=true
-min_width= 100.00%
+min_width=100.00%
 interval=5
 
 [load_average]
-label=
+#label=
 interval=10
 
 # Memory usage
@@ -124,7 +124,7 @@ signal=10
 # Date Time
 #
 [time]
-command=date '+ %H:%M:%S  %Y-%m-%d'
+command=date '+%H:%M:%S %Y-%m-%d'
 interval=1
 
 # OpenVPN support
