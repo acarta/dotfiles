@@ -56,13 +56,13 @@ interval=30
 label=CPU
 interval=1
 separator=false
-min_width=100.0%
+#min_width=100.0%
 interval=5
 
 [load_average]
 #label=
 interval=1
-min_width=10.00
+#min_width=10.00
 separator=false
 # Temperature
 #
@@ -72,14 +72,6 @@ separator=false
 [temperature]
 interval=1
 separator=true
-
-# Memory usage
-#
-# The type defaults to "mem" if the instance is not specified.
-[memory]
-label=MEM
-separator=true
-interval=5
 
 # Nvidia Usage
 [nvidia use]
@@ -93,6 +85,14 @@ separator=false
 #label=
 command=~/github/dotfiles/config/i3blocks/nvidia.sh
 interval=1
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=MEM
+separator=true
+interval=5
 
 # Network interface monitoring
 #
