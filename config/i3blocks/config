@@ -48,50 +48,21 @@ label=~
 #DIR=/mnt/data
 interval=30
 
-# Network interface monitoring
-#
-# If the instance is not specified, use the interface used for default route.
-# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
-#IFACE=wlan0
-color=#00FF00
-interval=5
-separator=false
-
-[wifi]
-#INTERFACE=wlp3s0
-#label=
-interval=10
-separator=false
-
-[bandwidth]
-#INTERFACE=eth0
-interval=5
-min_width="IN 500K OUT 500K"
-
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-#label=
-interval=5
-separator=true
-min_width=100.00%
+label=CPU
+interval=1
+separator=false
+min_width=100.0%
 interval=5
 
 [load_average]
 #label=
-interval=10
-label=
 interval=1
-separator=false
-min_width= 100.00%
-interval=5
-
-[load_average]
-label=
-interval=1
+min_width=10.00
 separator=false
 # Temperature
 #
@@ -122,6 +93,29 @@ separator=false
 #label=
 command=~/github/dotfiles/config/i3blocks/nvidia.sh
 interval=1
+
+# Network interface monitoring
+#
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[iface]
+#IFACE=wlan0
+color=#00FF00
+interval=5
+separator=false
+
+[wifi]
+#INTERFACE=wlp3s0
+#label=
+interval=10
+separator=false
+
+[bandwidth]
+#INTERFACE=eth0
+interval=5
+min_width="IN 500K OUT 500K"
+separator=true
+
 
 # Battery indicator
 #

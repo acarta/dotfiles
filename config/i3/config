@@ -212,7 +212,4 @@ exec_always "compton -c -C -f "
 
 exec --no-startup-id "nm-applet"
 exec --no-startup-id "nitrogen --restore"
-exec_always "compton -c -C -f "
 exec --no-startup-id "xset -dpms"
-exec --no-startup-id nitrogen --restore 
->>>>>>> c868f773d8b599d1ecf9260349df9de3f6e2d1d3
