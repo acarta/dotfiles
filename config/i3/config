@@ -182,9 +182,9 @@ bar {
         font pango:Inconsolata Medium 8
 
         # make bar auto-hidden by default
-        mode hide
-        hidden_state hide
-        modifier $mod
+        # mode hide
+        # hidden_state hide
+        # modifier $mod
 
         colors {
         background $bg-color
