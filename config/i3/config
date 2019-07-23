@@ -179,7 +179,7 @@ bindsym $mod+Shift+s exec systemctl suspend
 bar {
         status_command SCRIPT_DIR=/usr/share/i3blocks i3blocks -c ~/.config/i3blocks/config
         position top
-        font pango:Inconsolata Medium 8
+        font pango:Inconsolata Medium 10 
 
         # make bar auto-hidden by default
         # mode hide
@@ -208,8 +208,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 exec_always "setxkbmap -option ctrl:nocaps"
 exec_always "xcape -e Control_L=Escape"
-exec_always "compton -c -C -f "
 
+exec --no-startup-id "compton -b -c -C -f"
 exec --no-startup-id "nm-applet"
 exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id "xset -dpms"
