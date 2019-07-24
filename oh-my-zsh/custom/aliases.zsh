@@ -1,5 +1,3 @@
-#!/usr/bin/zsh
-
 # set emacs aliases
 function _set_emacs_aliases()
 {
@@ -29,10 +27,10 @@ function _set_pkg_aliases()
 _set_emacs_aliases
 _set_pkg_aliases
 
-alias firefox="/opt/firefox/firefox"
+# alias firefox="/opt/firefox/firefox"
 alias ipythonqt="ipython --pylab=qt"
 alias tailnf="tail -n20 -f"
-#alias julia="${HOME}/julia/julia-1.1.1/julia"
+# alias julia="${HOME}/julia/julia-1.1.1/julia"
 # alias julia="${HOME}/julia/julia-1.1.1/julia --banner=no -O2 --track-allocation --compile=yes"
 alias srx="source ${HOME}/.xinitrc"
 alias ub="${HOME}/.config/i3/update_background.sh"
