@@ -59,19 +59,26 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   colored-man-pages
   colorize
   command-not-found
   copydir
   copyfile
   cp
+  debian
+  docker
+  emacs
   extract
+  fzf
+  git
+  git
   history
   mosh
   pass
+  python
   rsync
   ssh-agent
+  systemd
   tmux
   vi-mode
 )
