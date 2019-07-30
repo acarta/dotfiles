@@ -7,5 +7,8 @@ export CXX="$(which clang++)"
 
 export PATH="${HOME}/.local/bin:${PATH}"
 
-export PYTHONPATH="${HOME}/github/flowplots:${PYTHONPATH}"
+export PYTHONPATH="${HOME}/github:${PYTHONPATH}"
+
+export JULIA_PKG_DEVDIR="${HOME}/github"
+
 export DISPLAY=:0
