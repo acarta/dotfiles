@@ -116,14 +116,20 @@ interval=5
 min_width="IN 500K OUT 500K"
 separator=true
 
-
 # Battery indicator
 #
 # The battery instance defaults to 0.
-#[battery]
-#label=BAT
-#label=⚡
-#interval=5
+[battery]
+label=BAT0
+instance=0
+label=⚡
+interval=5
+
+[battery]
+label=BAT1
+instance=1
+label=⚡
+interval=5
 
 # Volume indicator
 #
