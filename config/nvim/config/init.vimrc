@@ -114,4 +114,10 @@ Plug 'godlygeek/tabular'
 
 Plug 'christoomey/vim-tmux-navigator'
 
+" support for --remote; needed for vimtex
+Plug 'mhinz/neovim-remote'
+
+" latex
+Plug 'lervag/vimtex'
+
 call plug#end()
