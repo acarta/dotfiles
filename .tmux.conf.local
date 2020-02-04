@@ -281,4 +281,7 @@ bind-key -T copy-mode-vi C-k select-pane -U
 bind-key -T copy-mode-vi C-l select-pane -R
 bind-key -T copy-mode-vi C-\ select-pane -l
 
-source /usr/share/powerline/bindings/tmux/powerline.conf
+# Debian
+# source /usr/share/powerline/bindings/tmux/powerline.conf
+# macOS
+source Library/Python/3.7/lib/python/site-packages/powerline/bindings/tmux/powerline.conf
