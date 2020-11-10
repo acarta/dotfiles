@@ -1,12 +1,12 @@
 # set emacs aliases
-function _set_emacs_aliases()
-{
-    if [ -x "$(which emacs)" ]; then
-        alias ed="emacs --daemon"
-        alias ec="emacsclient -nc"
-        alias edc="ed && ec"
-    fi
-}
+# function _set_emacs_aliases()
+# {
+#     if [ -x "$(which emacs)" ]; then
+#         alias ed="emacs --daemon"
+#         alias ec="emacsclient -nc"
+#         alias edc="ed && ec"
+#     fi
+# }
 
 #set apt aliases
 function _set_pkg_aliases()
@@ -24,9 +24,12 @@ function _set_pkg_aliases()
 	  fi
 }
 
-_set_emacs_aliases
+# _set_emacs_aliases
 _set_pkg_aliases
 
 alias ipythonqt="ipython --pylab=qt"
 alias tailnf="tail -n20 -f"
-alias julia="${HOME}/julia/julia-1.0.5/bin/julia"
+alias julia="${HOME}/julia/julia-1.5.2/bin/julia"
+alias julia-ns="julia --startup-file=no"
+alias julia-lts="${HOME}/julia/julia-1.0.5/bin/julia"
+alias julia-lts-ns="julia-lts --startup-file=no"

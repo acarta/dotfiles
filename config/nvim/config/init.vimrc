@@ -43,6 +43,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/context_filetype.vim'
 " Python autocompletion
 Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
+" C++ autocomplete
+Plug 'deoplete-plugins/deoplete-clang'
 " Just to add the python go-to-definition and similar features, autocompletion
 " from this plugin is disabled
 Plug 'davidhalter/jedi-vim'
@@ -119,5 +121,8 @@ Plug 'mhinz/neovim-remote'
 
 " latex
 Plug 'lervag/vimtex'
+
+" formatting
+Plug 'sbdchd/neoformat'
 
 call plug#end()

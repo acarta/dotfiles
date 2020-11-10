@@ -10,9 +10,9 @@ Host github
   ForwardX11 no
   User git
 
-Host adama
-  HostName adama.ad.unh.edu
-  User acarta
+# Host adama
+#   HostName adama.ad.unh.edu
+#   User acarta
 
 Host janeway
   HostName janeway.local
@@ -24,6 +24,6 @@ Host premise
   User acarta
 
 Host picard
-  HostName billington.homedns.org
+  HostName picard.local
   User acarta
   ForwardX11Trusted yes

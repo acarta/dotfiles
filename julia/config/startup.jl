@@ -1,6 +1,22 @@
+ENV["JULIA_NUM_THREADS"]=8
+ENV["JULIA_PKG_DEVDIR"]="~/projects/julia"
+ENV["EDITOR"]="nvim"
+ENV["PYTHON"]="python3"
+
+import Pkg
+let
+    pkgs = [
+            "OhMyREPL",
+            "Revise",
+           ]
+    for pkg in pkgs
+        if Base.find_package(pkg) == nothing
+            Pkg.add(pkg)
+        end
+    end
+end
+
 using OhMyREPL
-using DelimitedFiles
-using LinearAlgebra
 
 atreplinit() do repl
     try
@@ -10,4 +26,29 @@ atreplinit() do repl
     end
 end
 
+# using DelimitedFiles
+# using LinearAlgebra
+# using Plots
+# using GraphRecipes
+
 push!(LOAD_PATH, "$(homedir())/github")
+push!(LOAD_PATH, "$(homedir())/julia")
+push!(LOAD_PATH, "$(homedir())/.julia/dev")
+
+# update packages in a worker process
+# import Distributed
+# let
+#     pkg_worker = Distributed.addprocs(1)[end]
+#     Distributed.remotecall(pkg_worker) do
+#         redirect_stdout() # silence everything, only on this worker
+#         Pkg.update()
+# 
+#         # remove worker and output done
+#         remotecall(1) do
+#             eval(quote
+#                      Distributed.rmprocs($(pkg_worker))
+#                      printstyled("\n Pkg.update() complete \n"; colore = :light_black)
+#                  end)
+#         end
+#     end
+# end
