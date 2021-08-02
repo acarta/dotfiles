@@ -24,15 +24,16 @@ Plug 'chriskempson/base16-vim'
 Plug 'altercation/vim-colors-solarized'
 
 "Plug 'powerline/powerline'
+Plug 'powerline/powerline'
 
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Code and files fuzzy finder
-" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " Extension to ctrlp, for fuzzy command finder
-" Plug 'fisadev/vim-ctrlp-cmdpalette'
+Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -40,15 +41,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'fisadev/FixedTaskList.vim'
 
 " Async autocompletion
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" " Completion from other opened files
-" Plug 'Shougo/context_filetype.vim'
-" " Python autocompletion
-" Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
-" " Just to add the python go-to-definition and similar features, autocompletion
-" " from this plugin is disabled
-" Plug 'davidhalter/jedi-vim'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Completion from other opened files
+Plug 'Shougo/context_filetype.vim'
+" Python autocompletion
+Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
+" C++ autocomplete
+Plug 'deoplete-plugins/deoplete-clang'
+" Just to add the python go-to-definition and similar features, autocompletion
+" from this plugin is disabled
+Plug 'davidhalter/jedi-vim'
 
 " Automatically close parenthesis, etc
 Plug 'Townk/vim-autoclose'
@@ -122,5 +125,14 @@ Plug 'mhinz/neovim-remote'
 
 " latex
 Plug 'lervag/vimtex'
+
+" formatting
+Plug 'sbdchd/neoformat'
+
+" C++ code completion
+Plug 'Valloric/YouCompleteMe'
+
+" C++ syntax checking
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()

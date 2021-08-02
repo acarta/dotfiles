@@ -22,17 +22,17 @@ set smarttab
 set shiftwidth=4
 set autoindent
 set smartindent
+set foldmethod=syntax
 
 syntax on
 syntax enable
 
 colorscheme solarized
-if strftime("%H") >=7 && strftime("%H") <= 20 
+if strftime("%H") >= 5 && strftime("%H") <= 17
     set background=light
-elseif
+else
     set background=dark
 endif
 
 hi! Normal ctermbg=NONE guibg=NONE
 hi! Normal ctermbg=NONE guibg=NONE
-

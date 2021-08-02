@@ -1,14 +1,13 @@
-export EDITOR="$(which nvim)"
-
-export CC="$(which clang)"
-export CXX="$(which clang++)"
-
-# export LD_LIBRARY_PATH="${HOME}/.local/lib:${LD_LIBRARY_PATH}"
-
+#
+# want ~/.local/bin at the FRONT of PATH (i.e. effectively overriding all others)
+# export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/anaconda3/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 
-export PYTHONPATH="${HOME}/github:${PYTHONPATH}"
+export EDITOR="nvim"
 
-export JULIA_PKG_DEVDIR="${HOME}/github"
+# use latest clang; cleaner than copying into ~/.local?
+export CC="$(which clang-12)"
+export CXX="$(which clang++-12)"
 
-export DISPLAY=:0
+export JULIA_NUM_THREADS="$(nproc)"
