@@ -22,12 +22,17 @@ set smarttab
 set shiftwidth=4
 set autoindent
 set smartindent
+set foldmethod=syntax
 
 syntax on
 syntax enable
 
-set background=dark
-colorscheme gruvbox
-hi! Normal ctermbg=NONE guibg=NONE
-hi! Normal ctermbg=NONE guibg=NONE
+colorscheme solarized
+if strftime("%H") >= 5 && strftime("%H") <= 17
+    set background=light
+else
+    set background=dark
+endif
 
+hi! Normal ctermbg=NONE guibg=NONE
+hi! Normal ctermbg=NONE guibg=NONE

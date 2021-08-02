@@ -1,5 +1,3 @@
-colorscheme gruvbox
-
 let g:vimfiler_as_default_explorer=1
 
 " for vimtex
@@ -17,3 +15,9 @@ let g:neoformat_cpp_clangformat = {
 \}
 let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" julia-vim
+hi link juliaFunctionCall Identifier

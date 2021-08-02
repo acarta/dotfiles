@@ -21,16 +21,18 @@ Plug 'morhetz/gruvbox'
 " Base16 colors
 Plug 'chriskempson/base16-vim'
 
-"Plug 'powerline/powerline'
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'powerline/powerline'
 
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Code and files fuzzy finder
-" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " Extension to ctrlp, for fuzzy command finder
-" Plug 'fisadev/vim-ctrlp-cmdpalette'
+Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -79,7 +81,7 @@ Plug 'lilydjwg/colorizer'
 Plug 't9md/vim-choosewin'
 
 " Automatically sort python imports
-Plug 'fisadev/vim-isort'
+" Plug 'fisadev/vim-isort'
 
 " Highlight matching html tags
 Plug 'valloric/MatchTagAlways'
@@ -124,5 +126,11 @@ Plug 'lervag/vimtex'
 
 " formatting
 Plug 'sbdchd/neoformat'
+
+" C++ code completion
+Plug 'Valloric/YouCompleteMe'
+
+" C++ syntax checking
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
