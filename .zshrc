@@ -67,7 +67,7 @@ plugins=(
     cp
     debian
     docker
-    emacs
+    # emacs
     extract
     fzf
     git
