@@ -27,9 +27,22 @@ function _set_pkg_aliases()
 # _set_emacs_aliases
 _set_pkg_aliases
 
-alias ipythonqt="ipython --pylab=qt"
+# system
 alias tailnf="tail -n20 -f"
-alias julia="${HOME}/julia/julia-1.5.2/bin/julia"
-alias julia-ns="julia --startup-file=no"
-alias julia-lts="${HOME}/julia/julia-1.0.5/bin/julia"
-alias julia-lts-ns="julia-lts --startup-file=no"
+
+# neovim
+# alias nvim="${HOME}/nvim/nvim"
+
+# python
+# alias python="${HOME}/anaconda3/bin/python"
+# alias ipython="${HOME}/anaconda3/bin/ipython"
+# alias ipythonqt="ipython --pylab=qt"
+
+# julia
+# alias julia="${HOME}/julia/julia"
+# alias julia-ns="julia --startup-file=no"
+# alias julia-lts="${HOME}/julia/julia-lts"
+# alias julia-lts-ns="julia-lts --startup-file=no"
+
+# r
+alias r="radian"
