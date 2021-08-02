@@ -21,6 +21,8 @@ Plug 'morhetz/gruvbox'
 " Base16 colors
 Plug 'chriskempson/base16-vim'
 
+Plug 'altercation/vim-colors-solarized'
+
 "Plug 'powerline/powerline'
 
 " Airline
@@ -38,14 +40,15 @@ Plug 'junegunn/fzf.vim'
 Plug 'fisadev/FixedTaskList.vim'
 
 " Async autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Completion from other opened files
-Plug 'Shougo/context_filetype.vim'
-" Python autocompletion
-Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
-" Just to add the python go-to-definition and similar features, autocompletion
-" from this plugin is disabled
-Plug 'davidhalter/jedi-vim'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" " Completion from other opened files
+" Plug 'Shougo/context_filetype.vim'
+" " Python autocompletion
+" Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
+" " Just to add the python go-to-definition and similar features, autocompletion
+" " from this plugin is disabled
+" Plug 'davidhalter/jedi-vim'
+Plug 'ycm-core/YouCompleteMe'
 
 " Automatically close parenthesis, etc
 Plug 'Townk/vim-autoclose'
@@ -77,7 +80,7 @@ Plug 'lilydjwg/colorizer'
 Plug 't9md/vim-choosewin'
 
 " Automatically sort python imports
-Plug 'fisadev/vim-isort'
+" Plug 'fisadev/vim-isort'
 
 " Highlight matching html tags
 Plug 'valloric/MatchTagAlways'
@@ -107,7 +110,7 @@ Plug 'myusuf3/numbers.vim'
 " Support for Julia syntax
 Plug 'JuliaEditorSupport/julia-vim'
 
-Plug 'pboettech/vim-cmake-syntax'
+" Plug 'pboettech/vim-cmake-syntax'
 
 " line up text
 Plug 'godlygeek/tabular'

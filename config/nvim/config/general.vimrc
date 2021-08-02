@@ -26,8 +26,13 @@ set smartindent
 syntax on
 syntax enable
 
-set background=dark
-colorscheme gruvbox
+colorscheme solarized
+if strftime("%H") >=7 && strftime("%H") <= 20 
+    set background=light
+elseif
+    set background=dark
+endif
+
 hi! Normal ctermbg=NONE guibg=NONE
 hi! Normal ctermbg=NONE guibg=NONE
 
