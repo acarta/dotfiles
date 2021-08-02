@@ -1,7 +1,7 @@
-ENV["JULIA_NUM_THREADS"]=8
-ENV["JULIA_PKG_DEVDIR"]="~/projects/julia"
-ENV["EDITOR"]="nvim"
-ENV["PYTHON"]="python3"
+ENV["JULIA_NUM_THREADS"] = 8
+ENV["JULIA_PKG_DEVDIR"] = joinpath(homedir(), "projects")
+ENV["EDITOR"] = joinpath(homedir(), "nvim", "nvim")
+# ENV["PYTHON"] = "python"
 
 import Pkg
 let
@@ -17,7 +17,6 @@ let
 end
 
 using OhMyREPL
-
 atreplinit() do repl
     try
         @eval using Revise
@@ -26,12 +25,13 @@ atreplinit() do repl
     end
 end
 
-# using DelimitedFiles
-# using LinearAlgebra
+using DelimitedFiles
+using LinearAlgebra
 # using Plots
+using Statistics
 # using GraphRecipes
 
-push!(LOAD_PATH, "$(homedir())/github")
+push!(LOAD_PATH, "$(homedir())/projects")
 push!(LOAD_PATH, "$(homedir())/julia")
 push!(LOAD_PATH, "$(homedir())/.julia/dev")
 
