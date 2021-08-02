@@ -7,7 +7,7 @@ export ZSH=${HOME}/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="af-magic"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -72,6 +72,7 @@ plugins=(
     fzf
     git
     history
+    iterm2
     mosh
     pass
     python
@@ -79,7 +80,9 @@ plugins=(
     ssh-agent
     systemd
     tmux
+    ubuntu
     vi-mode
+    zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,3 +118,6 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #source /home/acarta/.oh-my-git/prompt.sh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
