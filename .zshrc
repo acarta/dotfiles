@@ -7,7 +7,8 @@ export ZSH=${HOME}/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="af-magic"
+# ZSH_THEME="af-magic"
+ZSH_THEME="gentoo"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -21,7 +22,7 @@ ZSH_THEME="af-magic"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -36,10 +37,10 @@ ZSH_THEME="af-magic"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -59,29 +60,33 @@ ZSH_THEME="af-magic"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    adb
+    alias-finder
+    aliases
+    brew
     colored-man-pages
     colorize
     command-not-found
-    copydir
+    common-aliases
     copyfile
+    copypath
     cp
-    debian
     docker
-    # emacs
     extract
     fzf
     git
     history
     iterm2
-    mosh
+    macos
     pass
+    poetry
     python
     rsync
     ssh-agent
     systemd
     tmux
-    ubuntu
     vi-mode
+    virtualenv
     zsh-interactive-cd
 )
 
@@ -121,3 +126,35 @@ source $ZSH/oh-my-zsh.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/Users/acarta/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/acarta/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/Users/acarta/opt/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/acarta/opt/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+#if type brew &>/dev/null
+#then
+  #FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  #autoload -Uz compinit
+  #compinit
+#fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+source '/usr/local/opt/autoenv/activate.sh'
+
+#export PATH="/usr/local/sbin:$PATH"
