@@ -278,10 +278,6 @@ bind-key c new-window -c "#{pane_current_path}"
 bind-key - split-window -v -c "#{pane_current_path}"
 bind-key _ split-window -h -c "#{pane_current_path}"
 
-# powerline
-run-shell "~/.venv/bin/powerline-config tmux setup || true"
-run-shell "~/.venv/bin/powerline-daemon -q || true"
-
 # Smart pane switching with awareness of Vim splits.
 # See: https://github.com/christoomey/vim-tmux-navigator
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
