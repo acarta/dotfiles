@@ -76,7 +76,7 @@ plugins=(
     fzf
     git
     history
-    iterm2
+
     macos
     pass
     poetry
@@ -124,7 +124,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #source /home/acarta/.oh-my-git/prompt.sh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# iTerm2 shell integration removed (switched to Kitty; was interfering with tmux pane_current_path tracking)
 
 
 # >>> conda initialize >>>
@@ -158,3 +158,12 @@ export SDKMAN_DIR="$HOME/.sdkman"
 source '/usr/local/opt/autoenv/activate.sh'
 
 #export PATH="/usr/local/sbin:$PATH"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/acarta/.opam/opam-init/init.zsh' ]] || source '/Users/acarta/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
